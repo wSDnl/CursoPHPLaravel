@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class InicialController extends Controller
 {
     public function inicial(){
-        echo 'Controler';
+        return view('site.inicial');
     }
 }

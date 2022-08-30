@@ -1,0 +1,18 @@
+CONFIGURAR
+
+composer
+composer config -g repo.packagist composer https://packagist.org
+composer config -g github-protocols http ssh
+
+CRIAR PROJETO
+composer create-project laravel/laravel Sistem "5.0."
+
+CONFIGURAR LOCALHOST:8000
+cd public
+php -S localhost:8001
+
+ARTISAN SERVE (http://127.0.0.1:8000/)
+php artisan serve
+
+CRIAR CONTROLLER
+php artisan make:controller InicialController
