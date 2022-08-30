@@ -1,13 +1,14 @@
 <?php
 
+/// *** ROTAS PUBLICAS
 /// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| *** INICIAL
 Route::get('/','InicialController@inicial');
 
 /// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| *** CADASTRO DE USUARIOS
 Route::get('/CadastroUsuarios','CadastroUsuariosController@CadastroUsuarios');
 Route::get('/CadastroUsuarios/{id_usuario?}', 
-    function($id_usuario = 0){
-        echo 'Senha: '. $id_usuario . '<br>';
+function($id_usuario = 0){
+    echo 'Senha: '. $id_usuario . '<br>';
 })->where('id_usuario','[0-9]+');
 
 /// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| *** LOGIN 
@@ -19,4 +20,17 @@ Route::get('/Login/{email?}/{id_usuario?}',
         echo 'Senha: '. $id_usuario . '<br>';
 })->where('id_usuario','[0-9]+')->where('email','[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$');
 
- 
+
+/// *** ROTAS PRIVADAS
+Route::prefix('/app')->group( function(){
+
+    /// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| *** CLIENTES
+    Route::get('/Clientes', function(){ return 'Clientes';});
+    
+    /// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| *** PRODUTOS
+    Route::get('/Produtos','ProdutosController@Produtos');
+    
+    /// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| *** PRODUTOS
+    Route::get('/Fornecedores','FornecedoresController@Fornecedores');
+     
+});

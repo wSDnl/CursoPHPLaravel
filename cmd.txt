@@ -16,3 +16,6 @@ php artisan serve
 
 CRIAR CONTROLLER
 php artisan make:controller InicialController
+
+OBTER TODAS AS ROTAS DO PROJETO
+php artisan route:list
