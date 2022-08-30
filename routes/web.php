@@ -1,11 +1,7 @@
 <?php
 
-Route::get('/', function () {
-    return 'Login';
-});
-
-Route::get('/CadastroUsuarios', function () {
-    return 'Cadastro de Usuários';
-});
+Route::get('/','InicialController@inicial');
+Route::get('/Login','LoginController@Login');
+Route::get('/CadastroUsuarios','CadastroUsuariosController@CadastroUsuarios');
 
  
