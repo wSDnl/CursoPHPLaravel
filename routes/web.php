@@ -2,18 +2,18 @@
 
 /// *** ROTAS PUBLICAS
 /// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| *** INICIAL
-Route::get('/','InicialController@inicial');
+Route::get('/','InicialController@inicial')->name('site.index');
 
 /// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| *** CADASTRO DE USUARIOS
-Route::get('/CadastroUsuarios','CadastroUsuariosController@CadastroUsuarios');
+Route::get('/CadastroUsuarios','CadastroUsuariosController@CadastroUsuarios')->name('site.cadastro-de-clientes');
 Route::get('/CadastroUsuarios/{id_usuario?}', 
 function($id_usuario = 0){
     echo 'Senha: '. $id_usuario . '<br>';
 })->where('id_usuario','[0-9]+');
 
 /// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| *** LOGIN 
-Route::get('/Login','LoginController@Login');
-/// *** OS PAREMETROS OPCIONAIS DEVEM SER DEFINIDOS DA DIREITA PATA ESQUERDA <<<<<
+Route::get('/Login','LoginController@Login')->name('site.login');
+/// *** OS PARAMETROS OPCIONAIS DEVEM SER DEFINIDOS DA DIREITA PATA ESQUERDA <<<<<
 Route::get('/Login/{email?}/{id_usuario?}', 
     function($email = 'Email não informado' , $id_usuario = 0){
         echo 'Email: '. $email . '<br>';
@@ -25,12 +25,28 @@ Route::get('/Login/{email?}/{id_usuario?}',
 Route::prefix('/app')->group( function(){
 
     /// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| *** CLIENTES
-    Route::get('/Clientes', function(){ return 'Clientes';});
+    Route::get('/Clientes', function(){ 
+        return 'Clientes';
+    })->name('app.clientes');
     
     /// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| *** PRODUTOS
-    Route::get('/Produtos','ProdutosController@Produtos');
+    Route::get('/Produtos','ProdutosController@Produtos')->name('app.produtos');
     
     /// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| *** PRODUTOS
-    Route::get('/Fornecedores','FornecedoresController@Fornecedores');
+    Route::get('/Fornecedores','FornecedoresController@Fornecedores')->name('app.fornecedores');
      
+});
+
+
+/// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| *** SUCESSO
+Route::prefix('/resp')->group( function(){
+    
+    Route::get('/sucesso', function(){        
+        echo '[SUCESSO]';
+    })->name('resp.sucesso');
+    
+    Route::get('/erro', function(){
+        echo '[ERRO]';
+    })->name('resp.erro');
+
 });

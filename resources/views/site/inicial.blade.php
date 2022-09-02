@@ -1,11 +1,11 @@
 <ul>
     <li>
-       <a href="/">Home</a> 
+       <a href="{{ route('site.index') }}">Home</a> 
     </li>
     <li>
-        <a href="/Login">Login</a>
+        <a href="{{ route('site.login') }}">Login</a>
     </li>
     <li>
-        <a href="/CadastroUsuarios">Cadastro Usuarios</a>
+        <a href="{{ route('site.cadastro-de-clientes') }}">Cadastro Usuarios</a>
     </li>
 </ul>
