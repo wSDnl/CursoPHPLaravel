@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class FornecedoresController extends Controller
 {
     public function Fornecedores(){
-        $fornArray = ['Fornecedor 1','Fornecedor 2'];
+        $fornArray = ['Nome' => 'Fornecedor 2' , 'Status' => 'Ativo' ];
         return view('app.fornecedores.index' , ['fornArray' => $fornArray ]);
     }
 }
