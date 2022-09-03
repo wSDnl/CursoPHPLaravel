@@ -51,6 +51,10 @@ Route::prefix('/resp')->group( function(){
 
 });
 
+Route::get('/teste/{p1}/{p2}','TesteController@teste')->name('teste');
+
+
+
 /// *** -------------------------------------------------------------------------------- ROTA DE FALLBACK [ERRO]
 /*
 Route::fallback( function(){
