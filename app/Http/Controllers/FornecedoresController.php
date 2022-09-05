@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 class FornecedoresController extends Controller
 {
     public function Fornecedores(){
-        $fornecedores = '1';
+        $fornecedores = '';
         $fornArray = ['Nome' => 'Fornecedor 2' , 'Status' => 'Ativo' ];
-        return view('app.fornecedores.index' , ['fornArray' => $fornArray , 'fornecedores' => $fornecedores ]);
+        return view('app.fornecedores.index' , ['fornArray' => $fornArray , 'fornecedores' => $fornecedores , 'fornecedoresEmpty' => $fornecedoresEmpty ]);
     }
 }

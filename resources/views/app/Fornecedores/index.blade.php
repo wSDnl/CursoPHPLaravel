@@ -1,8 +1,14 @@
 {{-- COMENTARIO BLADE --}}
 <h3>Fornecedor</h3>
 
+
+/// *** VERIFICA SE A VARIAVEL EXISTE
 @isset($fornecedores)
     Fornecedor existe
+        /// *** VARIEVREL EXISTE MAS ESTÁ AVZIA
+        @empty($fornecedores)
+            VAZIA
+        @endempty
 @endisset
 
 @unless($fornArray["Status"] == 'Inativo') {{-- EXECUTA APENAS SE A CONDIÇÃO FOR FALSA --}}
