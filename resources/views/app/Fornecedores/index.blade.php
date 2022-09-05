@@ -1,7 +1,6 @@
 {{-- COMENTARIO BLADE --}}
 <h3>Fornecedor</h3>
 
-
 /// *** VERIFICA SE A VARIAVEL EXISTE
 @isset($fornecedores)
     Fornecedor existe
