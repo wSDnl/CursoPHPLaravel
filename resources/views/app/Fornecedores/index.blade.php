@@ -18,6 +18,28 @@
 
 <p>
 
+{{-- WHILE COM MATRIZ --}}
+@php $x = 0 @endphp
+@while(isset($fornArray[$x]))
+    {{ $fornArray[$x]["id"] }} / {{ $fornArray[$x]["Nome"] }} <br>
+    @php $x++ @endphp
+@endwhile
+
+
+
+<p>
+
+
+{{-- FOREACH --}}
+
+@foreach($fornArray as $indice => $fornecedor)
+    {{ $fornecedor["id"] }} / {{ $fornecedor["Nome"] }} <br>
+@endforeach
+
+<p>
+
+
+
 @if( count($fornArray) > 1)
     <h3>Existe mais de um fornecedor</h3>
 
