@@ -7,8 +7,11 @@ use Illuminate\Http\Request;
 class FornecedoresController extends Controller
 {
     public function Fornecedores(){
-        $fornecedores = '1';
-        $fornArray = ['Nome' => 'Fornecedor 2' , 'Status' => 'Ativo' ];
+        $fornecedores = '5';
+        $fornArray = [0 => ['id' => '1' , 'Nome' => 'Fornecedor 1'],
+                      1 => ['id' => '2' , 'Nome' => 'Fornecedor 2'],
+                      2 => ['id' => '3' , 'Nome' => 'Fornecedor 3']
+                     ];
 
         /// *** OPERADOR CONDICIONAL TERNÁRIO NATIVO PHP
         /// *** CONDIÇÃO ? TRUE : FALSE
@@ -16,6 +19,6 @@ class FornecedoresController extends Controller
         $msg = isset($fornecedores) ? 'Com Valor' : 'Sem valor';
         echo $msg;
 
-        return view('app.fornecedores.index' , ['fornArray' => $fornArray , 'fornecedores' => $fornecedores , 'fornecedoresEmpty' => $fornecedoresEmpty ]);
+        return view('app.fornecedores.index' , ['fornArray' => $fornArray , 'fornecedores' => $fornecedores ]);
     }
 }
