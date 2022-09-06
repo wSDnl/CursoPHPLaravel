@@ -19,3 +19,6 @@ php artisan make:controller InicialController
 
 OBTER TODAS AS ROTAS DO PROJETO
 php artisan route:list
+
+PRA FUNCIONAR EM OUTRAS MAQUINAS
+- TRANFERIR PASTA ( vendor e app\Exceptions )
