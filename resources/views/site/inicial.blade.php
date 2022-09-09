@@ -1,5 +1,5 @@
 @extends('site.layouts.body')
-@section('titulo','Inicio') {{-- PASSAR PARAMETRO --}}
+@section('titulo' , $titulo) {{-- PASSAR PARAMETRO --}}
 @section('body')
     inicio
 @endsection
