@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dnl 5</title>
+    <title>Laravel - @yield('titulo')</title>
 
     <!-- Global stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
@@ -129,7 +129,7 @@
                     <div class="sidebar-user userName" style="display:none">
                         <div class="category-content">
                             <div class="media">
-                                <a href="#" class="media-left"><img src="{{ asset('images/placeholder.jpg" class="img-circle img-sm" alt=""></a>
+                                <a href="#" class="media-left"><img src="{{ asset('images/placeholder.jpg') }}" class="img-circle img-sm" alt=""></a>
 
                                 <div class="media-body">
                                     <span class="media-heading text-semibold"><label id="JSONNomeUsuario"></label></span>

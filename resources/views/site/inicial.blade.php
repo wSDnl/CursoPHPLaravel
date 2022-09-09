@@ -1,7 +1,5 @@
 @extends('site.layouts.body')
-
-///*** coments teste  
-
+@section('titulo','Inicio') {{-- PASSAR PARAMETRO --}}
 @section('body')
     inicio
 @endsection
