@@ -16,6 +16,7 @@
     <link href="{{ asset('css/StyleOriginal.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/styleSistema.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/icons/fontawesome/styles.min.css') }}" rel="stylesheet" type="text/css">
+
     <!-- /global stylesheets -->
     <!-- Core JS files -->
     <script type="text/javascript" src="{{ asset('js/plugins/loaders/pace.min.js') }}"></script>

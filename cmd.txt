@@ -23,6 +23,9 @@ php artisan route:list
 PRA FUNCIONAR EM OUTRAS MAQUINAS
 - TRANFERIR PASTA ( vendor e app\Exceptions )
 
+CRIAR MODEL ( -m MIGRATIONS )
+php artisan make:model SiteUsuario -m
+
 
 git config --global user.email "atendimento@wssh.com.br"
 git config --global user.name "TiagoDat1012"
