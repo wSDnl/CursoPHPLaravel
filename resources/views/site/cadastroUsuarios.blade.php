@@ -28,7 +28,13 @@
             <div class="panel-body">
                
             <form action="{{ route('site.cadastro-de-clientes') }}" method="POST">
-                {{-- TOKEN QUE PERMITE O ENVIO VIA POST --}}
+                {{-- 
+                    TOKEN QUE PERMITE O ENVIO VIA POST
+                    MUITO IMPORTANTE
+                    CASO OCORRA UMA REQUISIÇÃO Cross-site (REQUISIÇÃO MALICIOSA)
+                    O CSRF TORNA O FORMULÁRIO LEGITIMO
+                    O SERVIDOR RECUSA O FORMULARIO CASO NÃO POSSUA _token
+                --}}
                 @csrf
                 <div class="form-group">
                     <label>Name:</label>
