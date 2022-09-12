@@ -27,8 +27,9 @@
 
             <div class="panel-body">
                
-            <form action="{{ route('site.cadastro-de-clientes') }}">
-
+            <form action="{{ route('site.cadastro-de-clientes') }}" method="POST">
+                {{-- TOKEN QUE PERMITE O ENVIO VIA POST --}}
+                @csrf
                 <div class="form-group">
                     <label>Name:</label>
                     <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome">

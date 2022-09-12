@@ -13,11 +13,11 @@ class CadastroUsuariosController extends Controller
         $matriz = [ 'titulo' => 'Usuarios como Matriz' , 'aviso' => $aviso , 'erro' => $erro ];
 
         // SUPER GLOBAL GET
-        if(isset($_GET["nome"])){
+        if(isset($_POST["nome"])){
             $erro  = 0;
-            $nome  = $_GET["nome"];
-            $email = $_GET["email"];
-            $senha = $_GET["senha"];
+            $nome  = $_POST["nome"];
+            $email = $_POST["email"];
+            $senha = $_POST["senha"];
 
             /// *** REGRAS DE NEGÓCIO
             if($nome == '' || $nome == null){

@@ -6,6 +6,8 @@ Route::get('/','InicialController@inicial')->name('site.index');
 
 /// ----------------------------------------------------------------------------------- *** CADASTRO DE USUARIOS
 Route::get('/CadastroUsuarios','CadastroUsuariosController@CadastroUsuarios')->name('site.cadastro-de-clientes');
+Route::post('/CadastroUsuarios','CadastroUsuariosController@CadastroUsuarios')->name('site.cadastro-de-clientes');
+
 Route::get('/CadastroUsuarios/{id_usuario?}', 
 function($id_usuario = 0){
     echo 'Senha: '. $id_usuario . '<br>';
